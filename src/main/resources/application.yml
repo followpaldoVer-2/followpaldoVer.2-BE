@@ -1,0 +1,56 @@
+spring:
+
+  
+#db-mysql
+ datasource:
+      url: jdbc:mysql://127.0.0.1:3306/DB이름
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      username: 유저이름
+      password: 비밀번호
+
+
+ servlet:
+    multipart:
+      enabled: true
+      file-size-threshold: 2KB
+      max-file-size: 200MB
+      max-request-size: 215MB
+
+
+
+
+
+#upload:
+#   directory: 파일업로드시 로컬 저장소 경로
+
+logging:
+  level:
+    org.springframework.web: DEBUG
+
+
+
+
+    
+
+jpa:
+   hibernate:
+     ddl-auto: 
+     naming:
+       physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+     properties:
+       hibernate:
+         show_sql: true
+         format_sql: true
+
+
+
+  
+jwt:
+  header: # JWT 토큰을 전달할 HTTP 헤더 이름
+  secret: # JWT 암호화에 사용할 비밀 키
+  token-validity-in-seconds: # JWT 토큰의 유효 시간 (초) 86400
+
+
+
+
+
